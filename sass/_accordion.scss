@@ -1,0 +1,43 @@
+.accordion {
+  overflow:hidden;
+  font-family: $font-main;
+  font-weight: 400;
+
+  a, a:hover, a:active, a:visited {
+    color: $white;
+    text-decoration: none;
+  }
+
+}
+
+.accordion-section {
+  @include borderRadius(10px, 10px, 10px, 10px);
+  padding: 5px;
+}
+
+.accordion-section-title {
+  @include linearGradient(#0C3683, #03183F);
+  @include borderRadius(10px, 10px, 10px, 10px);
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  font-size: 1.500em;
+  color: $white;
+
+  .right {
+    float: right;
+  }
+}
+
+.accordion-section-title.active {
+  @include borderRadius(10px, 10px, 0px, 0px);
+  color: $white;
+  text-decoration:none;
+}
+
+.accordion-section-content {
+  @include borderRadius(0px, 0px, 10px, 10px);
+  padding:15px;
+  display:none;
+  background: $white;
+}

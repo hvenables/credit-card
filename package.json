@@ -1,0 +1,18 @@
+{
+  "name": "comparethemarket",
+  "version": "1.0.0",
+  "description": "A page to show price comparision of credit cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harry Venables",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sourcemaps": "^1.6.0",
+    "jshint": "^2.9.1"
+  }
+}

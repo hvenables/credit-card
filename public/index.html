@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compare the Market</title>
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+  <script src='js/script.js'></script>
+</head>
+<body>
+  <div class="main container-fluid">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <div class="logo container-fluid">
+          <img src="assets/ctm-logo.svg" alt="Company Logo">
+        </div>
+        <div class="accordion">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script id="document-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="accordion-section">
+      <a class="accordion-section-title" href='#accordion-{{math @index "+"1}}'>
+        <span class="chevron"></span>
+        {{name}}<div class="right"><b>{{apr}}</b>% APR</div>
+      </a>
+      <div id='accordion-{{math @index "+" 1}}' class="accordion-section-content">
+        <div class="row">
+          <img class="col-sm-2 col-xs-4" src="assets/{{code}}.png">
+          <div class="col-sm-7 col-xs-6">{{information}}</div>
+          <div class="col-sm-3 col-xs-6">{{cashback}}</div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </script>
+  <script src='js/accordion.js'></script>
+</body>
+</html>

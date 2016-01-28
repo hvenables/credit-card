@@ -1,0 +1,23 @@
+.chevron::before {
+  @include rotate(-45deg);
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 10px;
+  padding: 3px;
+  border-style: solid;
+  border-width: 0 0.15em 0.15em 0;
+  content: '';
+  display: inline-block;
+  height: 0.46em;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  vertical-align: top;
+  width: 0.46em;
+  color: $main-green;
+}
+
+.chevron.down:before {
+  @include rotate(45deg);
+  top: 0;
+}

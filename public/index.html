@@ -7,19 +7,55 @@
   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
   integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
   crossorigin="anonymous">
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript"
     src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
   <script src='js/handleBars.js'></script>
+  <script src='js/hamburgerMenu.js'></script>
 </head>
 <body>
-  <div class="main container-fluid">
+  <div class="main container">
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1">
-        <div class="logo container-fluid">
-          <img src="assets/ctm-logo.svg" alt="Company Logo">
+        <div class="logo">
+          <img class="img-responsive" src="assets/ctm-logo.svg" alt="Company Logo">
+        </div>
+        <div class="navbar row">
+          <div class="nav-1 col-md-6 col-sm-12">
+            <div class="home">
+              <i class="fa fa-home"></i>
+            </div>
+            <div class="button">
+              <i class="fa fa-taxi"></i>
+              Vehicles
+            </div>
+            <div class="button">
+              <i class="fa fa-paw"></i>
+              Home &amp; pet
+            </div>
+            <div class="button">
+              <i class="fa fa-credit-card"></i>
+              Finances
+            </div>
+          </div>
+          <div class="nav-2 col-md-6 col-sm-12">
+            <div class="button">
+              <i class="fa fa-user"></i>
+              Life
+            </div>
+            <div class="button">
+              <i class="fa fa-envelope-o"></i>
+              Business
+            </div>
+            <div class="button">
+              <i class="fa fa-plane"></i>
+              Travel
+            </div>
+          </div>
         </div>
         <div class="accordion">
         </div>
@@ -35,11 +71,15 @@
       </a>
       <div id='accordion-{{math @index "+" 1}}' class="accordion-section-content">
         <div class="row card-summary">
-          <img class="card-img col-sm-2 col-xs-4" src="assets/{{code}}.png">
-          <div class="card-info col-sm-6 col-xs-6">{{information}}</div>
-          <div class="card-cashback col-sm-3 col-sm-offset-1 col-xs-6">
-            <div class="info col-xs-6 col-xs-offset-2">Cashback</div>
-            <div class="currency col-xs-6 col-xs-offset-2">£{{formatCurrency cashback}}</div>
+          <img class="card-img col-md-2 col-sm-3 col-sm-offset-0 col-xs-4
+          col-xs-offset-4" src="assets/{{code}}.png">
+          <div class="card-info col-md-6 col-sm-9 col-sm-offset-0 col-xs-10 col-xs-offset-1">{{information}}</div>
+          <div class="card-cashback col-md-3 col-md-offset-1 col-sm-6
+            col-sm-offset-1 col-xs-4 col-xs-offset-4">
+            <div class="row">
+              <div class="info col-sm-6 col-sm-offset-2 col-xs-12">Cashback</div>
+              <div class="currency col-sm-6 col-sm-offset-2 col-xs-12">£{{formatCurrency cashback}}</div>
+            </div>
           </div>
         </div>
       </div>

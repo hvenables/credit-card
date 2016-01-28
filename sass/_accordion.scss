@@ -16,7 +16,7 @@
 }
 
 .accordion-section-title {
-  @include linearGradient(#0C3683, #03183F);
+  @include linearGradient($light-blue, $dark-blue);
   @include borderRadius(10px, 10px, 10px, 10px);
   width: 100%;
   padding: 15px;
@@ -27,6 +27,9 @@
   .right {
     float: right;
   }
+}
+.accordion-section-title:hover {
+  @include linearGradient($dark-blue, $light-blue);
 }
 
 .accordion-section-title.active {
@@ -53,16 +56,13 @@
 
     .card-cashback {
       border-left: solid 2px $light-gray;
-      text-align: center;
+      padding: left;
 
       .info {
-        font-size: 2.4vw;
+        font-size: 2.2vw;
         font-weight: 900;
         padding-bottom: 0px;
-
-        @media only screen and (min-width : 480px) {
-          font-size: 20px;
-        }
+        text-align: center;
       }
 
       .currency {
@@ -70,7 +70,38 @@
         padding-top: 0px;
         margin-top: -10px;
         font-weight: 900;
+        text-align: center;
       }
+    }
+  }
+}
+
+@media only screen and (max-width : 991px) {
+  .accordion-section-content .card-summary .card-cashback {
+    border-top: solid 2px $light-gray;
+    border-left: solid 0px $white;
+    margin-top: 20px;
+
+    .info {
+      font-size: 20px;
+    }
+
+    .currency {
+      font-size: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width : 450px) {
+  .accordion-section-content .card-summary .card-cashback {
+
+    .info {
+      font-size: 15px;
+    }
+
+    .currency {
+      margin-top: 0px;
+      font-size: 15px;
     }
   }
 }

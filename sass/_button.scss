@@ -1,0 +1,53 @@
+.navbar {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  white-space: nowrap;
+
+  .button {
+    @include borderRadius(5px, 5px, 5px, 5px);
+    @include linearGradient($light-blue, $dark-blue);
+    color: $white;
+    font-family: $font-main;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 30%;
+    margin: 1px;
+    display: inline-block;
+    text-align: center;
+
+    i {
+      margin-right: 5px;
+    }
+
+  }
+
+  .button:hover {
+    @include linearGradient($dark-blue, $light-blue);
+  }
+
+  .home {
+    @include borderRadius(5px, 5px, 5px, 5px);
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 1px;
+    cursor: pointer;
+    color: $white;
+    background: $dark-blue;
+    width: 10%;
+    display: inline-block;
+
+    .fa-home {
+      font-size: 1.55em;
+      padding: 0;
+    }
+
+  }
+}
+
+.nav-2 {
+  padding-left: 10px;
+}

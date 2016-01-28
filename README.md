@@ -2,7 +2,7 @@
 
 #### Tools Used
 
-Technologies: Jquery, Sass, HTML5, Handlebars, Bootstrap
+Jquery, Sass, HTML5, Handlebars, Bootstrap
 
 #### Comments about build
 

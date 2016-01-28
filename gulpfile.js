@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     sass = require('gulp-ruby-sass'),
+    webserver = require('gulp-webserver'),
     sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function () {
@@ -19,5 +20,13 @@ gulp.task('watch', function() {
   gulp.watch(['sass/*'], ['sass']);
 });
 
-gulp.task('default', ['watch', 'sass']);
+gulp.task('webserver', function() {
+  gulp.src('public')
+    .pipe(webserver({
+    livereload: true,
+    open: true
+    }));
+});
+
+gulp.task('default', ['watch', 'sass', 'webserver']);
 

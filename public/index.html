@@ -12,7 +12,7 @@
     src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-  <script src='js/script.js'></script>
+  <script src='js/handleBars.js'></script>
 </head>
 <body>
   <div class="main container-fluid">
@@ -34,10 +34,13 @@
         {{name}}<div class="right"><b>{{apr}}</b>% APR</div>
       </a>
       <div id='accordion-{{math @index "+" 1}}' class="accordion-section-content">
-        <div class="row">
-          <img class="col-sm-2 col-xs-4" src="assets/{{code}}.png">
-          <div class="col-sm-7 col-xs-6">{{information}}</div>
-          <div class="col-sm-3 col-xs-6">{{cashback}}</div>
+        <div class="row card-summary">
+          <img class="card-img col-sm-2 col-xs-4" src="assets/{{code}}.png">
+          <div class="card-info col-sm-6 col-xs-6">{{information}}</div>
+          <div class="card-cashback col-sm-3 col-sm-offset-1 col-xs-6">
+            <div class="info col-xs-6 col-xs-offset-2">Cashback</div>
+            <div class="currency col-xs-6 col-xs-offset-2">£{{formatCurrency cashback}}</div>
+          </div>
         </div>
       </div>
     </div>

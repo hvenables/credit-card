@@ -18,6 +18,8 @@ All commands assume you are running this from terminal.
   * `https://github.com/hvenables/credit-card.git`
 2. Make sure you have node: `node -v` 
 3. Run `npm install`  
+4. Run `npm -g install http-server` (http-server node_module has to be installed
+   globally)
 4. Run `http-server`
 5. Visit: [http://localhost:8080/ ](http://localhost:8080/ )
 

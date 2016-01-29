@@ -16,10 +16,20 @@ All commands assume you are running this from terminal.
 
 1. Clone this repo and open the containing folder
   * `https://github.com/hvenables/credit-card.git`
-2. Make sure you have node: `node -v` 
+2. Make sure you have node: `node -v`
 3. Run `npm install`  
 4. Run `npm -g install http-server` (http-server node_module has to be installed
    globally)
 4. Run `http-server`
 5. Visit: [http://localhost:8080/ ](http://localhost:8080/ )
 
+### Testing
+
+Run the following commands from terminal to run the tests
+
+##### Jasmine (Unit Tests):  
+1. `open SpecRunner.html`
+
+##### jasmine-jquery(feature test):
+I struggled to get jasmine-jquery to work due to CORS issues if i had more time I would like to
+investigate jasmine-ajax as i feel this could get my feature tests working.

@@ -23,3 +23,7 @@ Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
         "%": lvalue % rvalue
     }[operator];
 });
+
+Handlebars.registerHelper('formatCurrency', function(value) {
+  return value.toFixed(2);
+});

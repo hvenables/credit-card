@@ -2,10 +2,9 @@ body {
   background: $background-blue;
 }
 a, a:hover, a:active, a:visited {
-  color: #fff;
+  color: $white;
   text-decoration: none;
 }
-
 
 .logo {
   padding: 20px;

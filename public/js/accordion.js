@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     $(document).on("click", ".accordion-section-title", function(e){
         var currentAttrValue = $(this).attr('href');
+        var chevron = e.currentTarget.childNodes[1]
 
         if($(e.target).is('.active')) {
             close_accordion_section();
@@ -14,7 +15,7 @@ $(document).ready(function() {
             close_accordion_section();
 
             $(this).addClass('active');
-            $(e.currentTarget.childNodes[1]).addClass('down');
+            $(chevron).addClass('down');
             $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
         }
 
